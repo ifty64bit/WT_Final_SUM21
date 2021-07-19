@@ -30,7 +30,7 @@
             $result=get($query);
             if(count($result)>0)
             {
-                setcookie('username',$username);
+                setcookie('username',$username,time()+1000);
                 header('Location: dashboard.php');
             }
             else{
